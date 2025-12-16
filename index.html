@@ -11,12 +11,12 @@
   <h1>🎟️ Rifa Online</h1>
 </header>
 
-<nav>
+  <nav>
   <button onclick="mostrar('registro')">Registro</button>
   <button onclick="mostrar('boletos')">Boletos</button>
-  <button onclick="mostrar('admin')">Admin</button>
+  <button onclick="accesoAdmin()">Admin</button>
 </nav>
- 
+  
 <!-- REGISTRO -->
 <section id="registro" class="active">
   <div class="box">
@@ -155,10 +155,20 @@ function accesoAdmin() {
   }
 }
 </script>
+const PASSWORD_ADMIN = "rifa2025"; // cambia la contraseña
 
-</script>
+function accesoAdmin() 
+  {
+  const pass = prompt("Contraseña de administrador:");
+  if (pass === PASSWORD_ADMIN) {
+    mostrar('admin');
+  } else {
+    alert("Acceso denegado");
+  }
+}
 
 </body>
 </html>
+
 
 
