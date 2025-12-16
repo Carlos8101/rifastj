@@ -11,12 +11,12 @@
   <h1>🎟️ Rifa Online</h1>
 </header>
 
-  <nav>
+<nav>
   <button onclick="mostrar('registro')">Registro</button>
   <button onclick="mostrar('boletos')">Boletos</button>
   <button onclick="accesoAdmin()">Admin</button>
 </nav>
-  
+
 <!-- REGISTRO -->
 <section id="registro" class="active">
   <div class="box">
@@ -143,33 +143,7 @@ function exportar() {
   XLSX.utils.book_append_sheet(wb, ws, "Rifa");
   XLSX.writeFile(wb, "rifa.xlsx");
 }
-  <script>
-const PASSWORD_ADMIN = "rifa2025"; // CAMBIA ESTA CONTRASEÑA
+</script>
 
-function accesoAdmin() {
-  const pass = prompt("Contraseña de administrador:");
-  if (pass === PASSWORD_ADMIN) {
-    mostrar('admin');
-  } else {
-    alert("Acceso denegado");
-  }
-}
-  <script>
-const PASSWORD_ADMIN = "rifa2025"; // CAMBIA ESTA CONTRASEÑA
-
-function accesoAdmin() {
-  const pass = prompt("Contraseña de administrador:");
-  if (pass === PASSWORD_ADMIN) {
-    mostrar('admin');
-  } else {
-    alert("Acceso denegado");
-  }
-}
-<script>
 </body>
 </html>
-
-
-
-
-
